@@ -17,17 +17,14 @@ The Personal Finance Dashboard is a web application designed to help users manag
   - pandas for data handling
 
 ## Installation
-1. Clone the repository:
-
+Clone the repository:
     git clone https://github.com/khemu003/personal-finance-dashboard.git
     cd personal-finance-dashboard
 
-2. Install the required packages:
-
+Install the required packages:
     pip install -r requirements.txt
 
-3. Set up the environment variables in a `.env` file:
-
+Set up the environment variables in a `.env` file:
     SECRET_KEY=your_secret_key
     host=your_database_host
     user=your_database_user
@@ -35,8 +32,7 @@ The Personal Finance Dashboard is a web application designed to help users manag
     name=your_database_name
     port=your_database_port
    
-4. Run the application:
-
+Run the application:
     python app.py
 
 ## Usage
