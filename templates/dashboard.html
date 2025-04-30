@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Personal Finance Dashboard</h1>
+            <a href="/logout" class="logout">Logout</a>
+            <br>
+        </header>
+        
+        <div class="transactions">
+            <h2>Your Transactions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for transaction in transactions.iterrows() %}
+                    <tr>
+                        <td>{{ transaction[1]['date'] }}</td>
+                        <td>{{ transaction[1]['category'] }}</td>
+                        <td>₹{{ transaction[1]['amount'] }}</td>
+                        <td>{{ transaction[1]['type'] }}</td>
+                        <td>{{ transaction[1]['description'] }}</td>
+                        <td>
+                            <a href="/change/{{ transaction[1]['id'] }}" class="edit"><i class="fas fa-edit"></i></a>
+                            <a href="/delete/{{ transaction[1]['id'] }}" class="delete"><i class="fas fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="/add" class="add-transaction">Add New Transaction</a>
+        </div>
+    </div>
+</body>
+</html>

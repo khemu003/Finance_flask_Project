@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Personal Finance Dashboard</h1>
+        <nav>
+            <ul class="nav-left">
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h2>Manage Your Finances Effectively</h2>
+            <p>Track your expenses, set budgets, and achieve your financial goals.</p>
+            <a href="/signup" class="cta-button">Get Started</a>
+        </div>
+
+        <div class="features">
+            <h2>Features</h2>
+            <div class="feature">
+                <h3>Expense Tracking</h3>
+                <p>Keep track of your daily expenses with ease.</p>
+            </div>
+            <div class="feature">
+                <h3>Budgeting Tools</h3>
+                <p>Set budgets and monitor your spending habits.</p>
+            </div>
+            <div class="feature">
+                <h3>Reports & Insights</h3>
+                <p>Get detailed reports to understand your financial health.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Personal Finance Dashboard. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>SignUp Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1>SignUp</h1>
+            <form method="post">
+                <div class="input-group">
+                    Email : <input type="email" name = "email" placeholder="Email address" required>
+                </div>
+                <div class="input-group">
+                    Password : <input type="password" name = "password" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    Confirm password : <input type="password" name = "confirm" placeholder="Password" required>
+                </div>
+                <button type="submit" class="sign-up">SIGN UP</button>
+                
+                <br><br>
+                <p>Already have an account? <a href="{{ login_link }}">Login here</a></p>
+                
+                <div class="separator">OR</div>
+                <button type="button" class="facebook">CONTINUE WITH FACEBOOK</button>
+                <br></br>
+                <button type="button" class="twitter">CONTINUE WITH TWITTER</button>
+            </form>
+        </div>
+        <div class="image-section">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" alt="Illustration">
+        </div>
+    </div>
+    <br>
+</body>
+</html>
